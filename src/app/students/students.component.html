@@ -1,0 +1,11 @@
+<div *ngFor="let student of students"  (click)="submit($event,student.name,student.age)">
+    Student : {{ student.name }} - {{ student.age }} 
+   <button >Click</button>
+    
+</div>
+
+<br/>
+<input type="text"  value="{{val}}"/>
+<br/>
+<input type="text"  value="{{ageVal}}"/>
+{{name}}
