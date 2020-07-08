@@ -1,0 +1,39 @@
+
+<form [formGroup]='form'>
+    <label>Name</label><br/>
+    <input type="text" placeholder="name" formControlName="name" />
+    <div
+        *ngIf="
+        form.controls.name.invalid &&
+        (form.controls.name.dirty || form.controls.name.touched)
+        "
+    >
+        <span>Name is required</span>
+    </div>
+    <br/><br/>
+    <label>Age</label><br/>
+    <input type="number" placeholder="age" formControlName="age"/>
+    <div
+        *ngIf="
+            form.controls.age.invalid &&
+            (form.controls.age.dirty || form.controls.age.touched)
+        "
+    >
+        <span *ngIf="form.controls.age.errors?.required">Age is required</span>
+        <span *ngIf="form.controls.age.errors?.min">Age min value is 10</span>
+    </div>
+    <br/><br/>
+    <input type="checkbox" formControlName="isBlocked"/>
+    <label>Block</label><br/><br/>
+    <button (click)="submit()" [disabled]="!form.valid">Submit</button> 
+
+</form>
+
+<div class="container">
+    <h2>Printing Student Array</h2>
+    <div *ngFor="let student of students">
+        Name: {{ student.name }} <br/>
+        Age: {{ student.age }} <br/>
+        Block: {{ student.isBlocked }} <br/><br/>
+    </div>
+</div>
