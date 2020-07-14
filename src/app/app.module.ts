@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { StudentsComponent } from './students/students.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { StartPageComponent } from './start-page/start-page.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { StudentFormComponent } from './student-form/student-form.component';
     HomeComponent,
     LoginFormComponent,
     StudentsComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    StartPageComponent,
+    UsersComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
