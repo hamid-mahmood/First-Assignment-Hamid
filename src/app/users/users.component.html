@@ -1,3 +1,30 @@
+<div class="container">
+<input type="text" class="form-control" placeholder="name" [(ngModel)]="name" />
+<input type="text" class="form-control" placeholder="job" [(ngModel)]="job" />
+<button class="btn btn-primary" (click)="addUser(name,job)">+ Add</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Image</th>
+        <th scope="col">Email</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index">
+        <th scope="row">{{ i+1 }}</th>
+        <td><img [src]="user.avatar" /></td>
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+        <td>{{ user.email }}</td>
+      
+      </tr>
+    </tbody>
+  </table>
+</div>
 <div *ngFor="let student of students">
     Student Name: {{ student.name }} <button (click)="viewUserDetails(student)">View Details</button><br/><br/>
 </div>

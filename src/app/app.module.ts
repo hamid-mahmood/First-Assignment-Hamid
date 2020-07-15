@@ -15,6 +15,8 @@ import { StartPageComponent } from './start-page/start-page.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
